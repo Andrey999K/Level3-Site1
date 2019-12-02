@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style-type: none;
+}
+
+*,
+*:focus,
+*:active {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: "Geometria";
+
+  src: url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff")
+      format("woff"),
+    url("https://nomail.com.ua/files/eot/ad7e0cab75cee35de4a243d54368eaa5.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff")
+      format("woff"),
+    url("https://nomail.com.ua/files/woff2/ad7e0cab75cee35de4a243d54368eaa5.woff2")
+      format("woff2");
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Geometria", sans-serif;
+  background: url("../images/body-background.jpg") no-repeat center top 0,
+    #fcf8fe;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  max-width: 290px;
+  width: 100%;
+  margin-top: 20px;
+
+  &__menu {
+    cursor: pointer;
+  }
+
+  &__menu-text {
+    display: none;
+  }
+
+  &__phone {
+    color: #8b7eac;
+    font-size: 12px;
+    text-decoration: none;
+  }
+}
+
+@mixin text10 {
+  color: #e65c7b;
+  font-size: 10px;
+  line-height: 15px;
+}
+
+@mixin text12 {
+  color: #e65c7b;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: bold;
+}
+
+@mixin text-fiol-10 {
+  color: #8e80a9;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 500;
+}
+
+@mixin text-fiol-12 {
+  color: #8e80a9;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: bold;
+}
+
+@mixin text-fiol-16 {
+  color: #8e80a9;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@mixin text-fiol-18 {
+  color: #8e80a9;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@mixin text-fiol-20 {
+  color: #8e80a9;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+.main {
+  width: 100%;
+}
+
+.banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 254px;
+  margin: 102px auto 70px;
+
+  &__action {
+    color: #8e80a9;
+    font-size: 18px;
+    font-family: "Caveat", cursive;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: 67px;
+    max-width: 254px;
+    line-height: 65px;
+    letter-spacing: 0.26em;
+    text-align: center;
+    text-shadow: 0 4px 50px rgba(131, 115, 161, 0.6);
+  }
+
+  &__free-lesson {
+    display: flex;
+    justify-content: space-between;
+    width: 174px;
+    margin-top: 19px;
+  }
+
+  &__button {
+    width: 30px;
+    height: 26px;
+    background: url("../images/banner-button-icon.svg") no-repeat center,
+      #e65c7b;
+    border: 0;
+    outline: none;
+  }
+
+  &__free-lesson-text {
+    display: flex;
+    align-items: center;
+    max-width: 137px;
+    @include text10();
+    line-height: 12px;
+  }
+}
+
+.directions {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto 40px;
+
+  &__title {
+    @include text-fiol-18();
+    font-weight: bold;
+    line-height: 18px;
+    margin-bottom: 40px;
+  }
+}
+
+.direction {
+  height: 315px;
+  padding-top: 200px;
+  margin-bottom: 30px;
+  background: #ffffff;
+  box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+
+  &__description {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__hatha-yoga {
+    background: url("../images/direction1.jpg") no-repeat;
+  }
+
+  &__asatanga-yoga {
+    background: url("../images/direction2.jpg") no-repeat;
+  }
+
+  &__kundalini-yoga {
+    background: url("../images/direction3.jpg") no-repeat;
+  }
+
+  &__text {
+    max-width: 207px;
+    padding: 20px 47px 20px 20px;
+  }
+
+  &__name {
+    @include text-fiol-12();
+  }
+
+  &__date {
+    @include text-fiol-10();
+    line-height: 15px;
+  }
+
+  &__instruction {
+    @include text10();
+    line-height: 15px;
+  }
+
+  &__button {
+    width: 43px;
+    height: 115px;
+    background: url("../images/banner-button-icon2.svg") no-repeat center,
+      #8e80a9;
+  }
+}
+
+.tariffs {
+  max-width: 250px;
+  margin: auto;
+
+  &__title {
+    @include text-fiol-18();
+    margin-bottom: 40px;
+  }
+
+  &__list-time {
+    display: flex;
+    justify-content: space-between;
+    @include text12();
+    max-width: 222px;
+    margin: auto;
+  }
+
+  &__one-month-list {
+    margin-top: 30px;
+  }
+
+  &__time {
+    cursor: pointer;
+  }
+}
+
+.selected-time {
+  position: relative;
+  &::before {
+    position: absolute;
+    top: 15px;
+    content: "";
+    width: 45px;
+    height: 1px;
+    background: #e65c7b;
+  }
+}
+
+.tariff {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 199px;
+  margin-top: 30px;
+  background: #ffffff;
+  box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+  padding: 30px 51px;
+
+  &__name {
+    @include text-fiol-16();
+  }
+
+  &__time {
+    @include text10();
+    text-align: center;
+  }
+
+  &__prise {
+    @include text-fiol-18();
+    text-align: center;
+  }
+
+  &__order {
+    width: 148px;
+    height: 34px;
+    background: #8e80a9;
+    font-family: "Geometria", sans-serif;
+    font-size: 10px;
+    line-height: 20px;
+    color: #ffffff;
+  }
+}
+
+.team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px auto 70px;
+  width: 100%;
+  max-width: 290px;
+  &__title {
+    @include text-fiol-18();
+    margin-bottom: 40px;
+  }
+}
+
+.crewman {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 412px;
+  width: 100%;
+
+  &__info {
+    max-width: 290px;
+    width: 100%;
+    height: 82px;
+    border: 2px solid black;
+    background-color: #fff;
+  }
+
+  &__experience {
+    @include text10();
+    line-height: 20px;
+    margin: 25px 0 20px 31px;
+  }
+
+  &__description {
+    @include text-fiol-10();
+    max-width: 228px;
+    width: 100%;
+    margin: auto;
+  }
+}
