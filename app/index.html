@@ -14,7 +14,7 @@
 
     <header class="header">
         <div class="header__menu">
-            <img class="header__menu-icon" src="../images/menu-icon.svg" width="30" height="15" alt="menu-icon">
+            <img class="header__menu-icon" src="./images/menu-icon.svg" width="30" height="15" alt="menu-icon">
             <p class="header__menu-text">Меню</p>
         </div>
         <a class="header__phone" href="tel:88126901010">8 (812) 690-10-10</a>
@@ -23,11 +23,11 @@
         <section class="banner">
             <p class="banner__action">Почувствуй расслабление в своем теле</p>
             <h1 class="banner__title">YOGA</h1>
-            <div class="banner__free-lesson">
+            <a class="banner__free-lesson" href="#free-lesson">
                 <button class="banner__button"></button>
                 <p class="banner__free-lesson-text">Запишитесь на бесплатное
                     пробное занятие</p>
-            </div>
+            </a>
         </section>
 
         <section class="directions">
@@ -99,24 +99,82 @@
 
         <section class="team">
             <h2 class="team__title">Наша команда</h2>
+            <button class="team-button team__crewman-previous"></button>
             <div class="crewman">
                 <div class="crewman__info">
-                    <p class="crewman__experience">Опыт преподавания: 8 лет</p>
-                    <p class="crewman__description">Практикует с 2011 года, является сертифицированным инструктором по
-                        флоу-
-                        йоге. Большой опыт преподавания йоги для начинающих и продолжающих.
-                        Обучался в Индии (International Association of Yoga: classical yoga, master of principles yoga
-                        therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга
-                        йога
-                        центр 108 А.Константинова), Московский центр классической йоги Виктора Бойко.
-                        Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал –
-                        центр
-                        №401).
-                        Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и
-                        здоровому питанию.</p>
+                    <p class="crewman__name">Инструктор <br> Серёжа Попов</p>
+                    <a class="crewman__vk-link" href="#"></a>
+                    <p class="crewman__direction">Хатха-йога</p>
+                    <a class="crewman__twitter-link" href="#"></a>
+                </div>
+                <p class="crewman__experience">Опыт преподавания: 8 лет</p>
+                <p class="crewman__description">Практикует с 2011 года, является сертифицированным инструктором по
+                    флоу-
+                    йоге. Большой опыт преподавания йоги для начинающих и продолжающих.
+                    Обучался в Индии (International Association of Yoga: classical yoga, master of principles yoga
+                    therapy), Непале (опыт медитативных и дыхательных техник, проживание в Ашраме), Москва (Аштанга
+                    йога
+                    центр 108 А.Константинова), Московский центр классической йоги Виктора Бойко.
+                    Сертифицированный инструктор по фитнесу и йоге (БГУФК), по массажу (Оздоровительный Витал –
+                    центр
+                    №401).
+                    Организатор и участник многочисленных конвенций и семинаров по йоге, медитативным техникам и
+                    здоровому питанию.</p>
+            </div>
+            <button class="team-button team__crewman-next   "></button>
+        </section>
+
+        <section class="reviews">
+            <h2 class="reviews__title">Отзывы</h2>
+            <div class="review">
+                <p class="review__text">Хожу на йогу вечером, чтобы расслабиться
+                    после тяжелого трудового дня.
+                    И после занятий наступает спокойствие!
+                    <br>
+                    Йога это отличный способ быстро
+                    и качественно расслабиться.
+                    Спасибо инструктору Марине.</p>
+                <div class="review__info">
+                    <img class="review__photo" src="./images/review-photo.jpg" width="51" height="51"
+                        alt="review-photo">
+                    <p class="review__name">Серёжа Попов</p>
+                    <p class="review__date">16 мая 2018</p>
+                    <a class="review__vk" href="#"></a>
+                    <a class="review__twitter" href="#"></a>
                 </div>
             </div>
+            <div class="reviews__button">
+                <button class="reviews__previous"></button>
+                <p class="reviews__number">1 / 9</p>
+                <button class="reviews__next"></button>
+            </div>
         </section>
+
+        <section class="free">
+            <a name="free-lesson"></a>
+            <h2 class="free__title">Запишитесь на бесплатное
+                пробное занятие</h2>
+            <form class="form" method="POST">
+                <p class="form__row">
+                    <label class="label" for="input-name"></label>
+                    <input class="form__name" type="text" placeholder="Ваше имя">
+                </p>
+                <p class="form__row">
+                    <label class="label" for="input-phone"></label>
+                    <input class="form__phone" type="text" placeholder="Ваш телефон">
+                </p>
+                <button class="form__send" type="submit">Оставить заявку</button>
+            </form>
+            <p class="form__name"></p>
+        </section>
+        <!-- ДОДЕЛАТЬ Placeholder -->
+        <!-- ДОДЕЛАТЬ Placeholder -->
+        <!-- ДОДЕЛАТЬ Placeholder -->
+        <!-- ДОДЕЛАТЬ Placeholder -->
+        <!-- ДОДЕЛАТЬ Placeholder -->
+        <!-- ДОДЕЛАТЬ Placeholder -->
+        <!-- ДОДЕЛАТЬ Placeholder -->
+
     </main>
     <script src="scripts/libs.min.js"></script>
     <script src="scripts/main.min.js"></script>

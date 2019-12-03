@@ -4,6 +4,7 @@
   padding: 0;
   border: 0;
   list-style-type: none;
+  text-decoration: none;
 }
 
 *,
@@ -78,7 +79,7 @@ body {
 @mixin text-fiol-10 {
   color: #8e80a9;
   font-size: 10px;
-  line-height: 10px;
+  line-height: 15px;
   font-weight: 500;
 }
 
@@ -110,6 +111,12 @@ body {
   font-size: 20px;
   line-height: 20px;
   font-weight: bold;
+}
+
+@mixin center {
+  max-width: 250px;
+  widows: 100%;
+  margin: 0 auto;
 }
 
 .main {
@@ -168,9 +175,8 @@ body {
 }
 
 .directions {
-  width: 100%;
-  max-width: 250px;
-  margin: 0 auto 40px;
+  @include center();
+  margin-bottom: 40px;
 
   &__title {
     @include text-fiol-18();
@@ -238,8 +244,7 @@ body {
 }
 
 .tariffs {
-  max-width: 250px;
-  margin: auto;
+  @include center();
 
   &__title {
     @include text-fiol-18();
@@ -312,43 +317,224 @@ body {
 }
 
 .team {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 100px auto 70px;
   width: 100%;
   max-width: 290px;
+
   &__title {
     @include text-fiol-18();
     margin-bottom: 40px;
+  }
+
+  &-button {
+    position: absolute;
+    width: 16px;
+    height: 31px;
+    top: 83px;
+  }
+
+  &__crewman-previous {
+    left: 0;
+    border: 1px solid #8e80a9;
+    box-sizing: border-box;
+    background: none;
+  }
+
+  &__crewman-next {
+    background: #8e80a9;
+    right: 0;
   }
 }
 
 .crewman {
   display: flex;
   flex-direction: column;
-  align-items: center;
   height: 412px;
   width: 100%;
+  max-width: 228px;
 
   &__info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
     max-width: 290px;
     width: 100%;
     height: 82px;
-    border: 2px solid black;
+    padding: 20px 20px 20px 97px;
     background-color: #fff;
+    background: url("../images/Instructor-photo.jpg") no-repeat, #ffffff;
+    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    @include text10();
+    line-height: 14px;
+    height: 23px;
+  }
+
+  &__vk-link {
+    width: 16px;
+    height: 10px;
+    background: url("../images/vk-logo.svg") no-repeat center;
+  }
+
+  &__direction {
+    display: flex;
+    align-items: flex-end;
+    @include text-fiol-10();
+    line-height: 7px;
+  }
+
+  &__twitter-link {
+    width: 18px;
+    height: 12px;
+    background: url("../images/twitter-logo.svg") no-repeat center;
   }
 
   &__experience {
     @include text10();
-    line-height: 20px;
-    margin: 25px 0 20px 31px;
+    line-height: 10px;
+    margin: 25px 0 20px;
   }
 
   &__description {
     @include text-fiol-10();
+    line-height: 15px;
     max-width: 228px;
     width: 100%;
-    margin: auto;
+    margin: 0 auto;
+  }
+}
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include center();
+
+  &__title {
+    @include text-fiol-18();
+    margin-bottom: 40px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 105px;
+    height: 16px;
+    margin-bottom: 70px;
+  }
+
+  &__previous {
+    width: 31px;
+    height: 16px;
+    border: 1px solid #8e80a9;
+    box-sizing: border-box;
+  }
+
+  &__number {
+    @include text-fiol-12();
+  }
+
+  &__next {
+    width: 31px;
+    height: 16px;
+    background: #8e80a9;
+  }
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+  background: url("../images/review-background.svg") no-repeat left 15px top
+      15px,
+    #ffffff;
+  box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+  padding: 60px 15px 30px;
+
+  &__text {
+    @include text-fiol-10();
+    margin-bottom: 29px;
+  }
+
+  &__photo {
+    float: left;
+    margin-right: 13px;
+  }
+
+  &__name {
+    @include text12();
+  }
+
+  &__date {
+    @include text-fiol-10();
+  }
+
+  &__vk {
+    width: 13px;
+    height: 8px;
+    background: url("../images/vk-logo.svg") no-repeat center/cover;
+  }
+
+  &__twitter {
+    width: 15px;
+    height: 10px;
+    background: url("../images/twitter-logo.svg") no-repeat center/cover;
+  }
+}
+
+.free {
+  padding: 70px 35px;
+  background: url("../images/free-background-320.jpg") no-repeat center;
+
+  &__title {
+    @include text-fiol-18();
+    margin-bottom: 35px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 172px;
+
+  &__name,
+  &__phone {
+    position: relative;
+    width: 100%;
+    height: 25px;
+    background: none;
+    border-bottom: 1px solid #8e80a9;
+  }
+
+  &__name::placeholder,
+  &__phone::placeholder {
+    position: absolute;
+    top: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #c8c0db;
+    font-family: "Geometria", sans-serif;
+  }
+
+  &__send {
+    width: 100%;
+    height: 56px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ffffff;
+    background: #e65c7b;
   }
 }
