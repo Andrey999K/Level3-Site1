@@ -20,47 +20,10 @@ button {
 @font-face {
   font-family: "Geometria";
 
-  src: url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff")
-      format("woff"),
-    url("https://nomail.com.ua/files/eot/ad7e0cab75cee35de4a243d54368eaa5.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff")
-      format("woff"),
-    url("https://nomail.com.ua/files/woff2/ad7e0cab75cee35de4a243d54368eaa5.woff2")
-      format("woff2");
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Geometria", sans-serif;
-  background: url("../images/body-background.jpg") no-repeat center top 0,
-    #fcf8fe;
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 290px;
-  margin-top: 20px;
-
-  &__menu {
-    cursor: pointer;
-  }
-
-  &__menu-text {
-    display: none;
-  }
-
-  &__phone {
-    color: #8b7eac;
-    font-size: 12px;
-    text-decoration: none;
-  }
+  src: url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff") format("woff"),
+    url("https://nomail.com.ua/files/eot/ad7e0cab75cee35de4a243d54368eaa5.eot?#iefix") format("embedded-opentype"),
+    url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff") format("woff"),
+    url("https://nomail.com.ua/files/woff2/ad7e0cab75cee35de4a243d54368eaa5.woff2") format("woff2");
 }
 
 @mixin text10 {
@@ -113,18 +76,64 @@ body {
   line-height: 20px;
 }
 
+@mixin text-fiol-21 {
+  color: #8e80a9;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+
 @mixin center {
   width: 100%;
   max-width: 250px;
   margin: 0 auto;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Geometria", sans-serif;
+  background: url("../images/body-background.jpg") no-repeat center top 0,
+    #fcf8fe;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  width: 100%;
+  max-width: 290px;
+  margin-top: 20px;
+
+  &__menu {
+    cursor: pointer;
+  }
+
+  &__menu-icon {
+    width: 30px;
+    height: 15px;
+  }
+
+  &__menu-text {
+    display: none;
+    @include text-fiol-12();
+  }
+
+  &__phone {
+    color: #8b7eac;
+    font-size: 12px;
+    text-decoration: none;
+  }
+}
+
 .main {
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
-  background: url("../images/directions-background.svg") no-repeat top 450px
-      left 0,
+  background: url("../images/directions-background.svg") no-repeat top 450px left 0,
     url("../images/background-clouds.jpg") no-repeat top 1536px left 0,
     url("../images/team-background.svg") no-repeat top 2289px left 0,
     url("../images/tariffs-background.svg") no-repeat top 2082px left 6px;
@@ -176,9 +185,23 @@ body {
     display: flex;
     align-items: center;
     max-width: 137px;
-
     @include text10();
     line-height: 12px;
+  }
+
+  &__bottom {
+    display: none;
+    justify-content: space-between;
+    max-width: 630px;
+    width: 100%;
+  }
+
+  &__social-networks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 30px;
+    width: 100%;
   }
 }
 
@@ -191,6 +214,10 @@ body {
     margin-bottom: 40px;
     font-weight: bold;
     line-height: 18px;
+  }
+
+  &__show-all {
+    display: none;
   }
 }
 
@@ -469,8 +496,7 @@ body {
   width: 100%;
   margin-bottom: 30px;
   padding: 60px 15px 30px;
-  background: url("../images/review-background.svg") no-repeat left 15px top
-      15px,
+  background: url("../images/review-background.svg") no-repeat left 15px top 15px,
     #ffffff;
   box-shadow: 0 4px 25px rgba(142, 128, 169, 0.2);
 
@@ -598,9 +624,8 @@ body {
 }
 
 @media (min-width: 321px) {
-  .body {
-    background: url("../images/banner-background-768.jpg") no-repeat center top
-        0,
+  body {
+    background: url("../images/banner-background-768.jpg") no-repeat center top 0,
       #fcf8fe;
   }
 
@@ -608,10 +633,148 @@ body {
     max-width: 768px;
   }
 
-  .header,
-  .banner,
-  .directions,
-  .tariffs,
+  .header {
+    max-width: 623px;
+
+    &__menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 55px;
+      width: 100%;
+    }
+
+    &__menu-icon {
+      width: 13px;
+      height: 7px;
+    }
+
+    &__menu-text {
+      display: block;
+    }
+  }
+
+  .banner {
+    max-width: 623px;
+
+    &__action {
+      font-size: 24px;
+    }
+
+    &__title {
+      font-size: 144px;
+      line-height: 144px;
+      max-width: 545px;
+      text-align: center;
+    }
+
+    &__free-lesson {
+      margin-bottom: 59px;
+    }
+
+    &__bottom {
+      display: flex;
+    }
+
+    &__city {
+      @include text-fiol-12();
+    }
+  }
+
+  .directions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 623px;
+
+    &__title {
+      width: 100%;
+      font-size: 21px;
+    }
+
+    &__show-all {
+      display: block;
+      height: 32px;
+      width: 100%;
+      background: #FFFFFF;
+      box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+      @include text-fiol-10();
+      font-family: "Geometria", sans-serif;
+    }
+  }
+
+  .direction {
+    position: relative;
+
+    &__hatha-yoga {
+      width: 250px;
+      height: 316px;
+    }
+
+    &__asatanga-yoga,
+    &__kundalini-yoga {
+      width: 353px;
+      height: 127px;
+      padding-top: 0;
+      padding-left: 159px;
+      background-size: contain;
+      margin-bottom: 15px;
+    }
+
+    &__description {
+      height: 100%;
+    }
+
+    &__text {
+      padding-right: 13px;
+    }
+
+    &__button {
+      position: absolute;
+      width: 30px;
+      height: 20px;
+      bottom: 25px;
+      right: 25px;
+    }
+  }
+
+  .tariffs {
+    max-width: 623px;
+
+    &__one-month-list {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .tariff {
+    width: 176px;
+    height: 159px;
+    padding: 36px 40px;
+
+    &:nth-child(2) {
+      width: 221px;
+      height: 221px;
+      padding: 36px 36px 38px;
+
+      & button {
+        display: block;
+      }
+    }
+
+    &__name {
+      @include text-fiol-18();
+    }
+
+    &__prise {
+      @include text-fiol-21();
+    }
+
+    &__order {
+      display: none;
+    }
+  }
+
   .team {
     max-width: 623px;
   }
