@@ -20,14 +20,10 @@ button {
 @font-face {
   font-family: "Geometria";
 
-  src: url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff")
-      format("woff"),
-    url("https://nomail.com.ua/files/eot/ad7e0cab75cee35de4a243d54368eaa5.eot?#iefix")
-      format("embedded-opentype"),
-    url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff")
-      format("woff"),
-    url("https://nomail.com.ua/files/woff2/ad7e0cab75cee35de4a243d54368eaa5.woff2")
-      format("woff2");
+  src: url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff") format("woff"),
+    url("https://nomail.com.ua/files/eot/ad7e0cab75cee35de4a243d54368eaa5.eot?#iefix") format("embedded-opentype"),
+    url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff") format("woff"),
+    url("https://nomail.com.ua/files/woff2/ad7e0cab75cee35de4a243d54368eaa5.woff2") format("woff2");
 }
 
 body {
@@ -115,12 +111,15 @@ body {
 
 @mixin center {
   max-width: 250px;
-  widows: 100%;
+  width: 100%;
   margin: 0 auto;
 }
 
 .main {
   width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  background: url("../images/directions-background.svg") no-repeat top 450px left 0, url("../images/background-clouds.jpg") no-repeat top 1536px left 0, url("../images/team-background.svg") no-repeat top 2289px left 0, url("../images/tariffs-background.svg") no-repeat top 2082px left 6px;
 }
 
 .banner {
@@ -196,6 +195,7 @@ body {
   &__description {
     display: flex;
     justify-content: space-between;
+    background-color: #fff;
   }
 
   &__text {
@@ -270,6 +270,7 @@ body {
 
 .selected-time {
   position: relative;
+
   &::before {
     position: absolute;
     top: 15px;
@@ -457,8 +458,7 @@ body {
   justify-content: space-between;
   width: 100%;
   margin-bottom: 30px;
-  background: url("../images/review-background.svg") no-repeat left 15px top
-      15px,
+  background: url("../images/review-background.svg") no-repeat left 15px top 15px,
     #ffffff;
   box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
   padding: 60px 15px 30px;
@@ -497,6 +497,8 @@ body {
 .free {
   padding: 70px 35px;
   background: url("../images/free-background-320.jpg") no-repeat center;
+  max-width: 320px;
+  margin: 0 auto;
 
   &__title {
     @include text-fiol-18();
@@ -508,11 +510,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 250px;
   height: 172px;
 
   &__name,
   &__phone {
-    position: relative;
     width: 100%;
     height: 25px;
     background: none;
@@ -521,8 +523,6 @@ body {
 
   &__name::placeholder,
   &__phone::placeholder {
-    position: absolute;
-    top: 20px;
     font-size: 14px;
     line-height: 20px;
     color: #c8c0db;
@@ -536,5 +536,52 @@ body {
     line-height: 20px;
     color: #ffffff;
     background: #e65c7b;
+  }
+}
+
+.footer {
+  @include center();
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 427px;
+  max-width: 320px;
+  padding: 50px 104px 50px 35px;
+  background: #8373A1;
+
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+
+  &__bottom {
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.social-networks {
+  max-width: 114px;
+  height: 21px;
+  width: 100%;
+
+  &__vk {
+    width: 25px;
+    height: 15px;
+    background: url("../images/footer-vk.svg") no-repeat center;
+  }
+
+  &__twitter {
+    width: 29px;
+    height: 20px;
+    background: url("../images/footer-twitter.svg") no-repeat center;
+  }
+
+  &__facebook {
+    width: 10px;
+    height: 21px;
+    background: url("../images/footer-facebook.svg") no-repeat center;
   }
 }
