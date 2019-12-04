@@ -2,9 +2,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0;
-  list-style-type: none;
   text-decoration: none;
+  list-style-type: none;
+  border: 0;
 }
 
 *,
@@ -20,10 +20,14 @@ button {
 @font-face {
   font-family: "Geometria";
 
-  src: url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff") format("woff"),
-    url("https://nomail.com.ua/files/eot/ad7e0cab75cee35de4a243d54368eaa5.eot?#iefix") format("embedded-opentype"),
-    url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff") format("woff"),
-    url("https://nomail.com.ua/files/woff2/ad7e0cab75cee35de4a243d54368eaa5.woff2") format("woff2");
+  src: url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff")
+      format("woff"),
+    url("https://nomail.com.ua/files/eot/ad7e0cab75cee35de4a243d54368eaa5.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff")
+      format("woff"),
+    url("https://nomail.com.ua/files/woff2/ad7e0cab75cee35de4a243d54368eaa5.woff2")
+      format("woff2");
 }
 
 body {
@@ -40,8 +44,8 @@ body {
   top: 0;
   display: flex;
   justify-content: space-between;
-  max-width: 290px;
   width: 100%;
+  max-width: 290px;
   margin-top: 20px;
 
   &__menu {
@@ -67,51 +71,51 @@ body {
 
 @mixin text12 {
   color: #e65c7b;
+  font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  font-weight: bold;
 }
 
 @mixin text-fiol-10 {
   color: #8e80a9;
+  font-weight: 500;
   font-size: 10px;
   line-height: 15px;
-  font-weight: 500;
 }
 
 @mixin text-fiol-12 {
   color: #8e80a9;
+  font-weight: bold;
   font-size: 12px;
   line-height: 12px;
-  font-weight: bold;
 }
 
 @mixin text-fiol-16 {
   color: #8e80a9;
+  font-weight: bold;
   font-size: 16px;
   line-height: 16px;
   text-align: center;
-  font-weight: bold;
 }
 
 @mixin text-fiol-18 {
   color: #8e80a9;
+  font-weight: bold;
   font-size: 18px;
   line-height: 18px;
   text-align: center;
-  font-weight: bold;
 }
 
 @mixin text-fiol-20 {
   color: #8e80a9;
+  font-weight: bold;
   font-size: 20px;
   line-height: 20px;
-  font-weight: bold;
 }
 
 @mixin center {
-  max-width: 250px;
   width: 100%;
+  max-width: 250px;
   margin: 0 auto;
 }
 
@@ -119,7 +123,11 @@ body {
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
-  background: url("../images/directions-background.svg") no-repeat top 450px left 0, url("../images/background-clouds.jpg") no-repeat top 1536px left 0, url("../images/team-background.svg") no-repeat top 2289px left 0, url("../images/tariffs-background.svg") no-repeat top 2082px left 6px;
+  background: url("../images/directions-background.svg") no-repeat top 450px
+      left 0,
+    url("../images/background-clouds.jpg") no-repeat top 1536px left 0,
+    url("../images/team-background.svg") no-repeat top 2289px left 0,
+    url("../images/tariffs-background.svg") no-repeat top 2082px left 6px;
 }
 
 .banner {
@@ -139,9 +147,9 @@ body {
   }
 
   &__title {
+    max-width: 254px;
     color: #ffffff;
     font-size: 67px;
-    max-width: 254px;
     line-height: 65px;
     letter-spacing: 0.26em;
     text-align: center;
@@ -168,6 +176,7 @@ body {
     display: flex;
     align-items: center;
     max-width: 137px;
+
     @include text10();
     line-height: 12px;
   }
@@ -179,29 +188,31 @@ body {
 
   &__title {
     @include text-fiol-18();
+    margin-bottom: 40px;
     font-weight: bold;
     line-height: 18px;
-    margin-bottom: 40px;
   }
 }
 
 .direction {
   height: 315px;
-  padding-top: 200px;
   margin-bottom: 30px;
+  padding-top: 200px;
   background: #ffffff;
-  box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+  box-shadow: 0 4px 25px rgba(142, 128, 169, 0.2);
 
   &__description {
     display: flex;
     justify-content: space-between;
-    background-color: #fff;
+    background-color: #ffffff;
   }
 
   &__text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 207px;
+    padding: 20px 47px 20px 20px;
   }
 
   &__hatha-yoga {
@@ -214,11 +225,6 @@ body {
 
   &__kundalini-yoga {
     background: url("../images/direction3.jpg") no-repeat;
-  }
-
-  &__text {
-    max-width: 207px;
-    padding: 20px 47px 20px 20px;
   }
 
   &__name {
@@ -254,6 +260,7 @@ body {
   &__list-time {
     display: flex;
     justify-content: space-between;
+
     @include text12();
     max-width: 222px;
     margin: auto;
@@ -274,10 +281,10 @@ body {
   &::before {
     position: absolute;
     top: 15px;
-    content: "";
     width: 45px;
     height: 1px;
     background: #e65c7b;
+    content: "";
   }
 }
 
@@ -288,9 +295,9 @@ body {
   justify-content: space-between;
   height: 199px;
   margin-top: 30px;
-  background: #ffffff;
-  box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
   padding: 30px 51px;
+  background: #ffffff;
+  box-shadow: 0 4px 25px rgba(142, 128, 169, 0.2);
 
   &__name {
     @include text-fiol-16();
@@ -309,11 +316,11 @@ body {
   &__order {
     width: 148px;
     height: 34px;
-    background: #8e80a9;
-    font-family: "Geometria", sans-serif;
-    font-size: 10px;
-    line-height: 20px;
     color: #ffffff;
+    font-size: 10px;
+    font-family: "Geometria", sans-serif;
+    line-height: 20px;
+    background: #8e80a9;
   }
 }
 
@@ -322,9 +329,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px auto 70px;
   width: 100%;
   max-width: 290px;
+  margin: 100px auto 70px;
 
   &__title {
     @include text-fiol-18();
@@ -333,51 +340,52 @@ body {
 
   &-button {
     position: absolute;
+    top: 83px;
     width: 16px;
     height: 31px;
-    top: 83px;
   }
 
   &__crewman-previous {
     left: 0;
-    border: 1px solid #8e80a9;
     box-sizing: border-box;
     background: none;
+    border: 1px solid #8e80a9;
   }
 
   &__crewman-next {
-    background: #8e80a9;
     right: 0;
+    background: #8e80a9;
   }
 }
 
 .crewman {
   display: flex;
   flex-direction: column;
-  height: 412px;
   width: 100%;
   max-width: 228px;
+  height: 412px;
 
   &__info {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     align-content: space-between;
-    max-width: 290px;
+    justify-content: space-between;
     width: 100%;
+    max-width: 290px;
     height: 82px;
     padding: 20px 20px 20px 97px;
-    background-color: #fff;
     background: url("../images/Instructor-photo.jpg") no-repeat, #ffffff;
-    box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
+    background-color: #ffffff;
+    box-shadow: 0 4px 25px rgba(142, 128, 169, 0.2);
   }
 
   &__name {
     display: flex;
     align-items: center;
-    @include text10();
-    line-height: 14px;
     height: 23px;
+    line-height: 14px;
+
+    @include text10();
   }
 
   &__vk-link {
@@ -389,8 +397,9 @@ body {
   &__direction {
     display: flex;
     align-items: flex-end;
-    @include text-fiol-10();
     line-height: 7px;
+
+    @include text-fiol-10();
   }
 
   &__twitter-link {
@@ -401,16 +410,16 @@ body {
 
   &__experience {
     @include text10();
-    line-height: 10px;
     margin: 25px 0 20px;
+    line-height: 10px;
   }
 
   &__description {
     @include text-fiol-10();
-    line-height: 15px;
-    max-width: 228px;
     width: 100%;
+    max-width: 228px;
     margin: 0 auto;
+    line-height: 15px;
   }
 }
 
@@ -418,6 +427,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+
   @include center();
 
   &__title {
@@ -427,18 +437,18 @@ body {
 
   &__button {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     width: 105px;
     height: 16px;
     margin-bottom: 70px;
   }
 
   &__previous {
+    box-sizing: border-box;
     width: 31px;
     height: 16px;
     border: 1px solid #8e80a9;
-    box-sizing: border-box;
   }
 
   &__number {
@@ -458,10 +468,11 @@ body {
   justify-content: space-between;
   width: 100%;
   margin-bottom: 30px;
-  background: url("../images/review-background.svg") no-repeat left 15px top 15px,
-    #ffffff;
-  box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
   padding: 60px 15px 30px;
+  background: url("../images/review-background.svg") no-repeat left 15px top
+      15px,
+    #ffffff;
+  box-shadow: 0 4px 25px rgba(142, 128, 169, 0.2);
 
   &__text {
     @include text-fiol-10();
@@ -495,10 +506,10 @@ body {
 }
 
 .free {
-  padding: 70px 35px;
-  background: url("../images/free-background-320.jpg") no-repeat center;
   max-width: 320px;
   margin: 0 auto;
+  padding: 70px 35px;
+  background: url("../images/free-background-320.jpg") no-repeat center;
 
   &__title {
     @include text-fiol-18();
@@ -523,18 +534,18 @@ body {
 
   &__name::placeholder,
   &__phone::placeholder {
-    font-size: 14px;
-    line-height: 20px;
     color: #c8c0db;
+    font-size: 14px;
     font-family: "Geometria", sans-serif;
+    line-height: 20px;
   }
 
   &__send {
     width: 100%;
     height: 56px;
+    color: #ffffff;
     font-size: 14px;
     line-height: 20px;
-    color: #ffffff;
     background: #e65c7b;
   }
 }
@@ -544,28 +555,28 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 427px;
   max-width: 320px;
+  height: 427px;
   padding: 50px 104px 50px 35px;
-  background: #8373A1;
+  background: #8373a1;
 
   &__text {
+    color: #ffffff;
     font-size: 14px;
     line-height: 20px;
-    color: #FFFFFF;
   }
 
   &__bottom {
+    color: rgba(255, 255, 255, 0.5);
     font-size: 12px;
     line-height: 20px;
-    color: rgba(255, 255, 255, 0.5);
   }
 }
 
 .social-networks {
+  width: 100%;
   max-width: 114px;
   height: 21px;
-  width: 100%;
 
   &__vk {
     width: 25px;
@@ -583,5 +594,25 @@ body {
     width: 10px;
     height: 21px;
     background: url("../images/footer-facebook.svg") no-repeat center;
+  }
+}
+
+@media (min-width: 321px) {
+  .body {
+    background: url("../images/banner-background-768.jpg") no-repeat center top
+        0,
+      #fcf8fe;
+  }
+
+  .main {
+    max-width: 768px;
+  }
+
+  .header,
+  .banner,
+  .directions,
+  .tariffs,
+  .team {
+    max-width: 623px;
   }
 }
