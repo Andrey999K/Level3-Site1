@@ -20,10 +20,14 @@ button {
 @font-face {
   font-family: "Geometria";
 
-  src: url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff") format("woff"),
-    url("https://nomail.com.ua/files/eot/ad7e0cab75cee35de4a243d54368eaa5.eot?#iefix") format("embedded-opentype"),
-    url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff") format("woff"),
-    url("https://nomail.com.ua/files/woff2/ad7e0cab75cee35de4a243d54368eaa5.woff2") format("woff2");
+  src: url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff")
+      format("woff"),
+    url("https://nomail.com.ua/files/eot/ad7e0cab75cee35de4a243d54368eaa5.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://nomail.com.ua/files/woff/ad7e0cab75cee35de4a243d54368eaa5.woff")
+      format("woff"),
+    url("https://nomail.com.ua/files/woff2/ad7e0cab75cee35de4a243d54368eaa5.woff2")
+      format("woff2");
 }
 
 @mixin text10 {
@@ -39,6 +43,13 @@ button {
   line-height: 15px;
 }
 
+@mixin text14 {
+  color: #e65c7b;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 @mixin text-fiol-10 {
   color: #8e80a9;
   font-weight: 500;
@@ -51,6 +62,13 @@ button {
   font-weight: bold;
   font-size: 12px;
   line-height: 12px;
+}
+
+@mixin text-fiol-14 {
+  color: #8e80a9;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 @mixin text-fiol-16 {
@@ -81,6 +99,13 @@ button {
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
+}
+
+@mixin text-fiol-30 {
+  color: #8e80a9;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
 }
 
 @mixin center {
@@ -133,7 +158,8 @@ body {
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
-  background: url("../images/directions-background.svg") no-repeat top 450px left 0,
+  background: url("../images/directions-background.svg") no-repeat top 450px
+      left 0,
     url("../images/background-clouds.jpg") no-repeat top 1536px left 0,
     url("../images/team-background.svg") no-repeat top 2289px left 0,
     url("../images/tariffs-background.svg") no-repeat top 2082px left 6px;
@@ -202,6 +228,13 @@ body {
     align-items: center;
     max-width: 30px;
     width: 100%;
+  }
+
+  &__vk-link,
+  &__twitter-link,
+  &__facebook-link {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -341,7 +374,7 @@ body {
   }
 
   &__order {
-    width: 148px;
+    width: 100%;
     height: 34px;
     color: #ffffff;
     font-size: 10px;
@@ -496,13 +529,25 @@ body {
   width: 100%;
   margin-bottom: 30px;
   padding: 60px 15px 30px;
-  background: url("../images/review-background.svg") no-repeat left 15px top 15px,
+  background: url("../images/review-background.svg") no-repeat left 15px top
+      15px,
     #ffffff;
   box-shadow: 0 4px 25px rgba(142, 128, 169, 0.2);
 
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4) {
+    display: none;
+  }
+
   &__text {
     @include text-fiol-10();
+    font-weight: 500;
     margin-bottom: 29px;
+  }
+
+  &__info {
+    height: 52px;
   }
 
   &__photo {
@@ -511,7 +556,7 @@ body {
   }
 
   &__name {
-    @include text12();
+    @include text10();
   }
 
   &__date {
@@ -532,7 +577,10 @@ body {
 }
 
 .free {
-  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   margin: 0 auto;
   padding: 70px 35px;
   background: url("../images/free-background-320.jpg") no-repeat center;
@@ -577,25 +625,51 @@ body {
 }
 
 .footer {
-  @include center();
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 320px;
+  // max-width: 320px;
   height: 427px;
   padding: 50px 104px 50px 35px;
   background: #8373a1;
 
-  &__text {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+  }
+
+  &__text,
+  &__number {
     color: #ffffff;
     font-size: 14px;
     line-height: 20px;
+    font-weight: 500;
+  }
+
+  &__info {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+
+  &__link {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
   }
 
   &__bottom {
     color: rgba(255, 255, 255, 0.5);
     font-size: 12px;
     line-height: 20px;
+
+    &-link {
+      color: rgba(255, 255, 255, 0.5);
+    }
   }
 }
 
@@ -603,6 +677,7 @@ body {
   width: 100%;
   max-width: 114px;
   height: 21px;
+  margin-right: 200px;
 
   &__vk {
     width: 25px;
@@ -625,7 +700,8 @@ body {
 
 @media (min-width: 321px) {
   body {
-    background: url("../images/banner-background-768.jpg") no-repeat center top 0,
+    background: url("../images/banner-background-768.jpg") no-repeat center top
+        0,
       #fcf8fe;
   }
 
@@ -666,6 +742,7 @@ body {
       line-height: 144px;
       max-width: 545px;
       text-align: center;
+      letter-spacing: 0.34em;
     }
 
     &__free-lesson {
@@ -677,6 +754,8 @@ body {
     }
 
     &__city {
+      display: flex;
+      align-items: center;
       @include text-fiol-12();
     }
   }
@@ -696,7 +775,7 @@ body {
       display: block;
       height: 32px;
       width: 100%;
-      background: #FFFFFF;
+      background: #ffffff;
       box-shadow: 0px 4px 25px rgba(142, 128, 169, 0.2);
       @include text-fiol-10();
       font-family: "Geometria", sans-serif;
@@ -709,6 +788,7 @@ body {
     &__hatha-yoga {
       width: 250px;
       height: 316px;
+      margin-bottom: 0;
     }
 
     &__asatanga-yoga,
@@ -729,7 +809,8 @@ body {
       padding-right: 13px;
     }
 
-    &__button {
+    &__asatanga-yoga button,
+    &__kundalini-yoga button {
       position: absolute;
       width: 30px;
       height: 20px;
@@ -777,5 +858,281 @@ body {
 
   .team {
     max-width: 623px;
+  }
+
+  .reviews {
+    max-width: 442px;
+
+    &__button {
+      height: 19px;
+    }
+  }
+
+  .review {
+    padding: 72px 57px 30px 87px;
+    background-position: 87px 34px;
+
+    &:nth-child(2) {
+      display: block;
+    }
+
+    &__text {
+      @include text-fiol-12();
+      font-weight: 500;
+      line-height: 20px;
+    }
+
+    &__name {
+      @include text12();
+      font-weight: 500;
+    }
+  }
+
+  .free {
+    background: url("../images/free-background-768.jpg");
+
+    &__title {
+      max-width: 411px;
+      @include text-fiol-30();
+    }
+  }
+
+  .form {
+    max-width: 411px;
+    width: 100%;
+    height: 214px;
+  }
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: initial;
+    padding: 75px 356px 75px 76px;
+
+    &__list {
+      width: 100%;
+      height: 114px;
+      flex-wrap: wrap;
+      align-content: space-between;
+      justify-content: space-between;
+    }
+
+    &__bottom-link {
+      margin-right: 44px;
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  body {
+    background: url("../images/banner-background-1440.jpg") no-repeat center top
+      0;
+  }
+  .header {
+    max-width: 1160px;
+  }
+  .main {
+    max-width: initial;
+  }
+  .banner {
+    max-width: 1160px;
+
+    &__action {
+      font-size: 45px;
+    }
+
+    &__title {
+      font-size: 265px;
+      line-height: 265px;
+      max-width: 1069px;
+    }
+
+    &__free-lesson {
+      width: 260px;
+      &-text {
+        @include text14();
+        max-width: 191px;
+      }
+    }
+
+    &__button {
+      width: 56px;
+      height: 48px;
+    }
+
+    &__bottom {
+      max-width: initial;
+    }
+
+    &__social-networks {
+      max-width: 57px;
+    }
+
+    &__vk-icon {
+      width: 13px;
+      height: 8px;
+    }
+
+    &__twitter-icon {
+      width: 15px;
+      height: 10px;
+    }
+
+    &__facebook-icon {
+      width: 5px;
+      height: 11px;
+    }
+
+    &__city {
+      @include text-fiol-16();
+    }
+  }
+
+  .directions {
+    max-width: 1257px;
+    padding: 63px 199px 86px 133px;
+
+    &__title {
+      @include text-fiol-30();
+      margin-bottom: 65px;
+    }
+
+    &__right {
+      max-width: 525px;
+      width: 100%;
+      .direction {
+        width: 100%;
+        height: 180px;
+        &__text {
+          padding: 33px 101px 33px 33px;
+        }
+      }
+    }
+
+    &__show-all {
+      height: 48px;
+    }
+  }
+
+  .direction {
+    &__hatha-yoga {
+      width: 366px;
+      height: 493px;
+      padding-top: 311px;
+      background: url("../images/direction1-background-1440.jpg") no-repeat
+        center top 0;
+    }
+
+    &__asatanga-yoga {
+      padding-left: 220px;
+      margin-bottom: 26px;
+      background: url("../images/direction2-background-1440.jpg") no-repeat;
+    }
+
+    &__kundalini-yoga {
+      padding-left: 220px;
+      margin-bottom: 57px;
+      background: url("../images/direction3-background-1440.jpg") no-repeat;
+    }
+
+    &__button {
+      width: 64px;
+      height: 100%;
+    }
+
+    &__text {
+      max-width: initial;
+      padding: 42px 85px 26px 46px;
+    }
+
+    &__name {
+      @include text-fiol-16();
+      text-align: initial;
+    }
+
+    &__date {
+      @include text-fiol-12();
+    }
+
+    &__instruction {
+      @include text12();
+    }
+  }
+
+  .tariffs {
+    max-width: 286px;
+    max-width: 931px;
+
+    &__title {
+      @include text-fiol-30();
+      margin-bottom: 54px;
+    }
+
+    &__list-time {
+      max-width: 286px;
+    }
+  }
+
+  .tariff {
+    width: 263px;
+    height: 237px;
+    padding: 58px 0 54px;
+
+    &:nth-child(2) {
+      width: 331px;
+      height: 331px;
+      padding: 58px 54px;
+
+      button {
+        height: 52px;
+      }
+    }
+
+    &__time {
+      @include text12();
+    }
+
+    &__prise {
+      @include text-fiol-30();
+    }
+  }
+
+  .reviews {
+    position: relative;
+    max-width: 943px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    &__title {
+      @include text-fiol-30();
+      margin-bottom: 62px;
+      width: 100%;
+    }
+
+    &__button {
+      position: absolute;
+      top: 234px;
+      width: 100%;
+      height: 30px;
+      margin-bottom: 0;
+
+      button {
+        height: 100%;
+        width: 45px;
+      }
+    }
+
+    &__number {
+      display: none;
+    }
+  }
+
+  .review {
+    max-width: 442px;
+    margin-bottom: 0;
+    height: 315px;
+    padding: 72px 57px 30px 87px;
   }
 }
